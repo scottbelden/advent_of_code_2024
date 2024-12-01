@@ -28,13 +28,3 @@ for left_int in lefts:
     similarity_score += left_int * right_counter[left_int]
 
 answer2(similarity_score)
-
-# totals = []
-# for sack in sacks:
-#     totals.append(sum(int(item) for item in sack))
-
-# ANSWER1 = answer1(max(totals))
-
-# totals.sort(reverse=True)
-
-# ANSWER2 = answer2(sum(totals[:3]))
