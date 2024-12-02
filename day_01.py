@@ -2,9 +2,6 @@ from collections import Counter
 
 from utils import answer1, answer2, get_input
 
-ANSWER1 = None
-ANSWER2 = None
-
 lines = get_input("day_01_input")
 
 lefts: list[int] = []

@@ -1,15 +1,16 @@
-from typing import Any
+from typing import Any, TypeVar
 
+T = TypeVar("T")
 
 DEBUG = False
 
 
-def answer1(value):
+def answer1(value: T) -> T:
     print(f"Part 1 Answer: {value}")
     return value
 
 
-def answer2(value):
+def answer2(value: T) -> T:
     print(f"Part 2 Answer: {value}")
     return value
 
