@@ -30,6 +30,16 @@ def get_input_as_str(filename):
         return fp.read().strip()
 
 
+def get_input_as_grid(filename: str) -> dict[tuple[int, int], str]:
+    output_dict: dict[tuple[int, int], str] = {}
+    with open(filename) as fp:
+        for y_index, row in enumerate(fp):
+            for x_index, col in enumerate(row):
+                output_dict[(x_index, y_index)] = col
+
+    return output_dict
+
+
 def get_line_separated_inputs(filename):
     chunks = []
     chunk = []
