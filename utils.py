@@ -40,9 +40,9 @@ def get_input_as_grid(filename: str) -> dict[tuple[int, int], str]:
     return output_dict
 
 
-def get_line_separated_inputs(filename):
-    chunks = []
-    chunk = []
+def get_line_separated_inputs(filename: str) -> list[list[str]]:
+    chunks: list[list[str]] = []
+    chunk: list[str] = []
     with open(filename) as fp:
         for line in fp:
             if line.strip() == "":
