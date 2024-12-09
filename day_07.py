@@ -12,7 +12,6 @@ def combine(a: int, b: int) -> int:
 
 
 def test_args(args: list[int], operations: tuple[Callable[[int, int], int], ...]) -> int:
-    # print(f"testing {args=} and {operations=}")
     total = 0
     for index, arg in enumerate(args):
         if index == 0:
@@ -21,7 +20,6 @@ def test_args(args: list[int], operations: tuple[Callable[[int, int], int], ...]
 
         total = operations[index - 1](total, arg)
 
-    # print(f"{total=}")
     return total
 
 

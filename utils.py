@@ -33,11 +33,23 @@ def get_input_as_str(filename):
 def get_input_as_grid(filename: str) -> dict[tuple[int, int], str]:
     output_dict: dict[tuple[int, int], str] = {}
     with open(filename) as fp:
-        for y_index, row in enumerate(fp):
+        for y_index, row in enumerate(line.strip() for line in fp):
             for x_index, col in enumerate(row):
                 output_dict[(x_index, y_index)] = col
 
     return output_dict
+
+
+def print_grid(grid: dict[tuple[int, int], str]) -> None:
+    temp = ""
+    for (x, y), char in grid.items():
+        if x == 0:
+            print(temp)
+            temp = ""
+
+        temp += char
+
+    print(temp)
 
 
 def get_line_separated_inputs(filename: str) -> list[list[str]]:
