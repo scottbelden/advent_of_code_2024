@@ -25,7 +25,7 @@ def get_input_as_int(filename):
         return [int(line.strip()) for line in fp]
 
 
-def get_input_as_str(filename):
+def get_input_as_str(filename: str) -> str:
     with open(filename) as fp:
         return fp.read().strip()
 

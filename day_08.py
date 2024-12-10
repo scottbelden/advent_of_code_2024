@@ -1,9 +1,7 @@
 from collections import defaultdict
 from itertools import permutations
-from operator import add, mul
-from collections.abc import Callable
 
-from utils import answer1, answer2, get_input_as_grid, print_grid
+from utils import answer1, answer2, get_input_as_grid
 
 grid = get_input_as_grid("day_08_input")
 
